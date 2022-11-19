@@ -1,0 +1,5 @@
+rm(list=ls())
+Fahrenheit<-readline("Type Temperature in Fahrenheit:")
+Fahrenheit=as.integer(Fahrenheit)
+Celsius<-((Fahrenheit-32)/1.8)
+cat(Fahrenheit, " Fahrenheit equals ", Celsius, sep="")

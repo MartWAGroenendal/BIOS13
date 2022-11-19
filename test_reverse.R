@@ -1,0 +1,10 @@
+op<-par(mfrow=c(1,1))
+par(mfrow=c(1,2))
+
+source("reverse.R")
+u<-rnorm(10)
+reverse_u<-reverse.vector(u)
+plot(reverse_u, pch=1, type="l", lty='dotdash', col='orange', xlab='x-axis')
+lines(u)
+points(u)
+par(op)

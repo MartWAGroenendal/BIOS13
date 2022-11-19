@@ -1,0 +1,12 @@
+rm(list=ls())
+source("complement.R")
+source("calculatecgcontent.R")
+mito_fasta<-read.fasta('NC_012920.fasta')
+dnaseq <- mito_fasta$NC_012920.1
+lengthDNAseq<-length(dnaseq)
+basefreq<-nucleo_content(dnaseq)
+compli<-create_complement(dnaseq)
+basefreqcom<-nucleo_content(compli)
+cat("DNA sequence length is", lengthDNAseq,"\n")
+cat("Nucleotide frequency is", basefreq, "\n")
+cat("Complementary strand nucleotide frequency is", basefreqcom, "\n")
